@@ -9,8 +9,14 @@ next.user-config.*
 
 # Environment variables
 .env*.local
+.dev.vars
+!.dev.vars.example
 
 # Common ignores
 node_modules
 .next/
 .DS_Store
+.open-next
+.wrangler
+.mf
+cloudflare-env.d.ts
