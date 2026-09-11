@@ -1,4 +1,9 @@
 import type { Metadata } from 'next'
+import { socialMetadata } from '@/lib/site'
+
+const title = "Request Pet Assistance | Cashy's Legacy"
+const description =
+  'Request non-emergency help with veterinary care and pet insurance. Life-threatening emergencies should go to the nearest vet immediately.'
 
 export const metadata: Metadata = {
   title: 'Request Pet Assistance',
@@ -7,17 +12,11 @@ export const metadata: Metadata = {
   alternates: {
     canonical: '/help',
   },
-  openGraph: {
-    title: "Request Pet Assistance | Cashy's Legacy",
-    description:
-      'Request non-emergency help with veterinary care and pet insurance. Life-threatening emergencies should go to the nearest vet immediately.',
+  ...socialMetadata({
+    title,
+    description,
     url: '/help',
-  },
-  twitter: {
-    title: "Request Pet Assistance | Cashy's Legacy",
-    description:
-      'Request non-emergency help with veterinary care and pet insurance. Life-threatening emergencies should go to the nearest vet immediately.',
-  },
+  }),
 }
 
 export default function HelpLayout({

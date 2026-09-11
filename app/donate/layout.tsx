@@ -1,4 +1,9 @@
 import type { Metadata } from 'next'
+import { socialMetadata } from '@/lib/site'
+
+const title = "Donate to Cashy's Legacy | $1 = 1 Vaccine"
+const description =
+  'Every $1 funds 1 vaccine. 100% of donations go directly to helping animals.'
 
 export const metadata: Metadata = {
   title: 'Donate — $1 Funds 1 Vaccine',
@@ -7,17 +12,11 @@ export const metadata: Metadata = {
   alternates: {
     canonical: '/donate',
   },
-  openGraph: {
-    title: "Donate to Cashy's Legacy | $1 = 1 Vaccine",
-    description:
-      'Every $1 funds 1 vaccine. 100% of donations go directly to helping animals.',
+  ...socialMetadata({
+    title,
+    description,
     url: '/donate',
-  },
-  twitter: {
-    title: "Donate to Cashy's Legacy | $1 = 1 Vaccine",
-    description:
-      'Every $1 funds 1 vaccine. 100% of donations go directly to helping animals.',
-  },
+  }),
 }
 
 export default function DonateLayout({
