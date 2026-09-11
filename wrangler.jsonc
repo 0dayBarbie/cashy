@@ -1,6 +1,6 @@
 {
   "$schema": "node_modules/wrangler/config-schema.json",
-  "name": "cashys-legacy",
+  "name": "cashy",
   "main": ".open-next/worker.js",
   "compatibility_date": "2026-09-01",
   "compatibility_flags": [
@@ -26,14 +26,14 @@
       // Self-reference used by OpenNext caching / revalidation
       // see https://opennext.js.org/cloudflare/caching
       "binding": "WORKER_SELF_REFERENCE",
-      "service": "cashys-legacy"
+      "service": "cashy"
     }
   ],
   // Optional later: R2 incremental cache (create the bucket first, then uncomment)
   // "r2_buckets": [
   //   {
   //     "binding": "NEXT_INC_CACHE_R2_BUCKET",
-  //     "bucket_name": "cashys-legacy-opennext-cache"
+  //     "bucket_name": "cashy-opennext-cache"
   //   }
   // ]
 }
