@@ -1,6 +1,5 @@
 import type { Metadata, Viewport } from 'next'
 import { Playfair_Display, Inter } from 'next/font/google'
-import { Analytics } from '@vercel/analytics/next'
 import { OrganizationJsonLd } from '@/components/organization-json-ld'
 import { SITE_DESCRIPTION, SITE_NAME, SITE_URL, socialMetadata } from '@/lib/site'
 import './globals.css'
@@ -78,7 +77,6 @@ export default function RootLayout({
       <body className="font-sans antialiased">
         <OrganizationJsonLd />
         {children}
-        {process.env.NODE_ENV === 'production' && <Analytics />}
       </body>
     </html>
   )
